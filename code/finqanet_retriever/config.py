@@ -56,7 +56,7 @@ class parameters():
     epoch = 10
     learning_rate = 2e-5
 
-    report = 300
+    report = 600
     report_loss = 100
 
     train_sample_size = 500
