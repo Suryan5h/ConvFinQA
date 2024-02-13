@@ -130,8 +130,6 @@ def train():
         print("Epoch No.: {}".format(epochNo))
         train_iterator.reset()
         for x in train_iterator:
-            if k>=600:
-                continue
             # print("Train iterator:{}".format(x))
             # Inside the training loop, it retrieves inputs (input_ids, input_mask, segment_ids) and labels (label)
             # from the batch x and moves them to the appropriate device (e.g., GPU) specified in the configuration.
@@ -197,6 +195,7 @@ def train():
                     # write_log(log_file, validation_result)
 
                 model.train()
+                break
 
 
 def evaluate(data_ori, data, model, ksave_dir, mode='valid'):
