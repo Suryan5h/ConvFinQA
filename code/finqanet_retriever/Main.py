@@ -130,6 +130,8 @@ def train():
         print("Epoch No.: {}".format(epochNo))
         train_iterator.reset()
         for x in train_iterator:
+            if k>=600:
+                continue
             # print("Train iterator:{}".format(x))
             # Inside the training loop, it retrieves inputs (input_ids, input_mask, segment_ids) and labels (label)
             # from the batch x and moves them to the appropriate device (e.g., GPU) specified in the configuration.
@@ -166,7 +168,7 @@ def train():
             if k > 1 and k % conf.report_loss == 0:
                 write_log(log_file, "%d : loss = %.3f" %
                           (k, record_loss / record_k))
-                print("It's here:{}".format(k))
+                # print("It's here:{}".format(k))
                 record_loss = 0.0
                 record_k = 0
 

@@ -170,14 +170,14 @@ def read_examples(input_path, tokenizer, op_list, const_list, log_file, sample_s
     with open(input_path) as input_file:
         input_data = json.load(input_file)
 
-    if sample_size is not None:
-        if sample_size >= len(input_data):
-            print("Warning: Sample size is greater than or equal to the dataset size. Returning full dataset.")
-        else:
-            # Perform random sampling
-            random.seed(42)  # Set seed for reproducibility
-            sampled_indices = random.sample(range(len(input_data)), sample_size)
-            input_data = [input_data[i] for i in sampled_indices]
+    # if sample_size is not None:
+    #     if sample_size >= len(input_data):
+    #         print("Warning: Sample size is greater than or equal to the dataset size. Returning full dataset.")
+    #     else:
+    #         # Perform random sampling
+    #         random.seed(42)  # Set seed for reproducibility
+    #         sampled_indices = random.sample(range(len(input_data)), sample_size)
+    #         input_data = [input_data[i] for i in sampled_indices]
 
     examples = []
     for entry in input_data:

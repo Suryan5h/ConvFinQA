@@ -13,9 +13,9 @@ class parameters():
     model_save_name = "retriever-roberta-large-2e-5-new-train"
 
     # use "train_turn.json", "dev_turn.json", and "test_turn.json"
-    train_file = root_path + "data/data/train_turn.json"
-    valid_file = root_path + "data/data/dev_turn.json"
-    test_file = root_path + "data/data/test_turn_private.json"
+    train_file = root_path + "data/train_turn.json"
+    valid_file = root_path + "data/dev_turn.json"
+    test_file = root_path + "data/test_turn_private.json"
 
     op_list_file = "operation_list.txt"
     const_list_file = "constant_list.txt"
@@ -51,7 +51,7 @@ class parameters():
     n_best_size = 20
     dropout_rate = 0.1
 
-    batch_size = 4
+    batch_size = 6
     batch_size_test = 16
     epoch = 100
     learning_rate = 2e-5
